@@ -1,3 +1,10 @@
+<!--  George Ng
+  INFO 343 C
+
+  This is the html file for the Police Shooting map webpage. The website
+  contains a map that has the location of various police shootings
+  crowdsourced from Deadspin and organizes it based on race/gender. -->
+
 <!doctype html>
 
 <html>
@@ -24,13 +31,32 @@
   <body>
     <!-- You may want to put your title and additional informaiton here -->
     <div class="container">
+      <table class="table-striped" style="width:80%">
+      <tr>
+        <th></th>
+        <th>Men</th>
+        <th>Women/Unspecified</th>
+      </tr>
+      <tr>
+        <th>White</th>
+        <td id="whiteMen"></td> 
+        <td id="whiteWomen"></td>
+      </tr>
+      <tr>
+        <th>Non-White</th>
+        <td id="notWhiteMen"></td> 
+        <td id="notWhiteWomen"></td>
+      </tr>
+      </table>
       <!-- This is the div that your map will go in.  You'll need to reference its id -->
+
+      <p> This map shows crowdsourced police shooting data from <a href="http://regressing.deadspin.com/deadspin-police-shooting-database-update-were-still-go-1627414202">Deadspin</a>. The circle colors indicate whether the victim was <span id="hit">hit</span> or <span id="killed">killed</span>. Click on each point for further details. </p>
       <div id="container"></div>
     </div>
     <script>
       
-      // This is where you should execute your drawMap function
-      
+      drawMap()
+
     </script>
   </body>
 </html>
